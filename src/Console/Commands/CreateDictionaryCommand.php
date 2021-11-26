@@ -44,7 +44,7 @@ class CreateDictionaryCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->resolveStubPath('/../../stubs/dictionary.stub');
+        return $this->resolveStubPath('/../../Stubs/dictionary.stub');
     }
 
     /**
