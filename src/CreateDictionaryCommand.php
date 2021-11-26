@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Dictionaries;
 
 use Illuminate\Console\Command;
 
