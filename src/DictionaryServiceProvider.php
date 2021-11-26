@@ -2,7 +2,6 @@
 
 namespace Dictionaries;
 
-use App\Console\Commands\CreateDictionaryCommand;
 use Illuminate\Support\ServiceProvider;
 
 class DictionaryServiceProvider extends ServiceProvider
