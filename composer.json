@@ -1,0 +1,24 @@
+{
+  "name": "artem-alekseev/dictionaries",
+  "type": "library",
+  "description": "Use dictionary in laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artem Alekseev",
+      "email": "lexx73652@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dictionary\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dictionary\\ServiceProvider"
+      ]
+    }
+  }
+}
