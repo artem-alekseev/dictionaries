@@ -14,13 +14,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Dictionary\\": "src/"
+      "Dictionaries\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Dictionary\\DictionaryServiceProvider"
+        "Dictionaries\\DictionaryServiceProvider"
       ]
     }
   }
