@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Dictionaries\Dictionary;
+
+class {{ class }} extends Dictionary
+{
+    /**
+     * @inheritDoc
+     */
+    public static function getDictionary(): array
+    {
+        return [];
+    }
+}
