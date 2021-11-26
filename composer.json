@@ -20,7 +20,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Dictionaries\\DictionaryServiceProvider"
+        "Dictionaries\\Providers\\DictionaryServiceProvider"
       ]
     }
   }

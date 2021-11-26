@@ -1,6 +1,6 @@
 <?php
 
-namespace Dictionaries;
+namespace Dictionaries\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

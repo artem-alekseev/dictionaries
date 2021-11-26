@@ -1,8 +1,9 @@
 <?php
 
-namespace Dictionaries;
+namespace Dictionaries\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Dictionaries\Console\Commands\CreateDictionaryCommand;
 
 class DictionaryServiceProvider extends ServiceProvider
 {
