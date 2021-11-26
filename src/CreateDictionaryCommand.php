@@ -2,9 +2,9 @@
 
 namespace Dictionaries;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
 
-class CreateDictionaryCommand extends Command
+class CreateDictionaryCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
@@ -21,14 +21,11 @@ class CreateDictionaryCommand extends Command
     protected $description = 'Create a new dictionary class';
 
     /**
-     * Create a new command instance.
+     * The type of class being generated.
      *
-     * @return void
+     * @var string
      */
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    protected $type = 'Dictionary';
 
     /**
      * Execute the console command.
@@ -37,6 +34,40 @@ class CreateDictionaryCommand extends Command
      */
     public function handle()
     {
-        dump($this->argument('name'));
+        parent::handle();
+    }
+
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
+    protected function getStub()
+    {
+        return $this->resolveStubPath('/stubs/dictionary.stub');
+    }
+
+    /**
+     * Resolve the fully-qualified path to the stub.
+     *
+     * @param  string  $stub
+     * @return string
+     */
+    protected function resolveStubPath($stub)
+    {
+        return file_exists($customPath = $this->laravel->basePath(trim($stub, '/')))
+            ? $customPath
+            : __DIR__.$stub;
+    }
+
+    /**
+     * Get the default namespace for the class.
+     *
+     * @param  string  $rootNamespace
+     * @return string
+     */
+    protected function getDefaultNamespace($rootNamespace)
+    {
+        return is_dir(app_path('Models\Dictionaries')) ? $rootNamespace.'\\Models\\Dictionaries' : $rootNamespace;
     }
 }

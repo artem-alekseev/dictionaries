@@ -33,12 +33,4 @@ abstract class Dictionary
     {
         return implode(',', static::getRange());
     }
-
-    /**
-     * @return array
-     */
-    public static function getHeaders()
-    {
-        return array_keys(static::getDictionary());
-    }
 }

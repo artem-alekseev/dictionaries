@@ -18,9 +18,5 @@ class DictionaryServiceProvider extends ServiceProvider
                 CreateDictionaryCommand::class
             ]);
         }
-
-        $this->publishes([
-            __DIR__.'/Dictionary.php' => app_path('Models/Dictionaries/Dictionary.php')
-        ]);
     }
 }
