@@ -20,7 +20,7 @@ class DictionaryServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/Dictionary.php' => app_path('Models/Dictionary.php')
+            __DIR__.'/Dictionary.php' => app_path('Models/Dictionaries/Dictionary.php')
         ]);
     }
 }
