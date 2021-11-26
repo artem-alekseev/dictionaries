@@ -68,7 +68,7 @@ class CreateDictionaryCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        if (is_dir(app_path('Models\Dictionaries'))) {
+        if (!is_dir(app_path('Models\Dictionaries'))) {
             mkdir(app_path('Models\Dictionaries'));
         }
 
